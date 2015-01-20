@@ -1,12 +1,13 @@
 /*!
- * EventEmitter v4.2.11 - git.io/ee
- * Unlicense - http://unlicense.org/
- * Oliver Caldwell - http://oli.me.uk/
+ * EventEmitter v4.2.9 - git.io/ee
+ * Oliver Caldwell
+ * MIT license
  * @preserve
  */
 
-;(function () {
-    'use strict';
+define( [ ], function() {
+  'use strict';
+
 
     /**
      * Class for managing events.
@@ -457,16 +458,7 @@
         return EventEmitter;
     };
 
-    // Expose the class either via AMD, CommonJS or the global object
-    if (typeof define === 'function' && define.amd) {
-        define(function () {
-            return EventEmitter;
-        });
-    }
-    else if (typeof module === 'object' && module.exports){
-        module.exports = EventEmitter;
-    }
-    else {
-        exports.EventEmitter = EventEmitter;
-    }
-}.call(this));
+    exports.EventEmitter = EventEmitter;
+
+    return EventEmitter;
+} );
